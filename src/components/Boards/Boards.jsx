@@ -27,7 +27,9 @@ function Boards({ navigate }) {
 
 	return (
 		<nav className={styles.grid}>
-			<h1 className={styles.nav}>Job Sources</h1>
+			<div className={styles.nav}>
+				<h1>Job Sources</h1>
+			</div>
 			<div className={styles.flex + " " + styles.body}>
 				{boards.map((board) => {
 					return (

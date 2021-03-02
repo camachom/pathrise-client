@@ -22,8 +22,16 @@
 
 .nav {
 	grid-area: nav;
+	display: flex;
+	align-items: center;
 }
 
 .body {
 	grid-area: body;
+}
+
+@media screen and (max-width: 800px) {
+	.flex {
+		flex-direction: column;
+	}
 }
