@@ -5,26 +5,36 @@ import styles from "./Jobs.module.css";
 
 function Jobs() {
 	const { boardId } = useParams();
-	const [jobs, setJobs] = useState([]);
+	const [currentJobs, setJobs] = useState([]);
 	const [board, setBoard] = useState([]);
+	const [paging, setPaging] = useState({});
+
+	const [limit] = useState(20);
+	const [offset, setOffset] = useState(0);
 
 	useEffect(() => {
 		const fetchJobs = async () => {
 			try {
 				const response = await fetch(
-					`http://localhost:3000/boards/${boardId}/jobs`
+					`http://localhost:3000/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`
 				);
-				const { jobs, board } = await response.json();
+				const { jobs, board, paging } = await response.json();
 
-				setJobs(jobs);
+				setJobs([...currentJobs, ...jobs]);
 				setBoard(board);
+				setPaging(paging);
 			} catch (error) {
 				console.error(error);
 			}
 		};
 
 		fetchJobs();
-	}, []);
+	}, [offset]);
+
+	const clickMoreJobs = (e) => {
+		e.preventDefault();
+		setOffset(limit + offset);
+	};
 
 	return (
 		<div className={styles.grid}>
@@ -39,7 +49,7 @@ function Jobs() {
 					</tr>
 				</thead>
 				<tbody>
-					{jobs.map((job) => {
+					{currentJobs.map((job) => {
 						return (
 							<tr>
 								<td>{job.id}</td>
@@ -53,6 +63,16 @@ function Jobs() {
 					})}
 				</tbody>
 			</table>
+
+			{paging.page < paging.pages && (
+				<div className={styles.footer}>
+					<div className={styles.flex}>
+						<button className={styles.button} onClick={clickMoreJobs}>
+							Load more jobs
+						</button>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }
