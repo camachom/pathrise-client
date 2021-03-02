@@ -1,0 +1,35 @@
+.logoContainer {
+	height: 75px;
+	width: 75px;
+	flex-basis: 25%;
+}
+
+.description {
+	flex-basis: 75%;
+	max-width: 300px;
+	margin-left: 15px;
+}
+
+.logo {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	padding-bottom: 20px;
+	padding-top: 20px;
+
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border: 1px solid black;
+
+	margin-right: 10px;
+	background-color: white;
+	min-height: 200px;
+}
