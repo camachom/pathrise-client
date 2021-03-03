@@ -9,10 +9,13 @@ function Boards({ navigate }) {
 	useEffect(() => {
 		const fetchBoards = async () => {
 			try {
-				const response = await fetch("http://40.88.230.46:3000/boards", {
-					method: "GET",
-					mode: "cors",
-				});
+				const response = await fetch(
+					"https://secure-coast-10683.herokuapp.com/boards",
+					{
+						method: "GET",
+						mode: "cors",
+					}
+				);
 				const data = await response.json();
 
 				setBoards(data);

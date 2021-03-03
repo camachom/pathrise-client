@@ -16,7 +16,7 @@ function Jobs() {
 		const fetchJobs = async () => {
 			try {
 				const response = await fetch(
-					`http://40.88.230.46:3000/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`,
+					`https://secure-coast-10683.herokuapp.com/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`,
 					{
 						method: "GET",
 						mode: "cors",
