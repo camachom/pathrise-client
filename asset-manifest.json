@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pathrise-client/static/css/main.7a9b8e1a.chunk.css",
+    "main.js": "/pathrise-client/static/js/main.b08625eb.chunk.js",
+    "main.js.map": "/pathrise-client/static/js/main.b08625eb.chunk.js.map",
+    "runtime-main.js": "/pathrise-client/static/js/runtime-main.1963cfce.js",
+    "runtime-main.js.map": "/pathrise-client/static/js/runtime-main.1963cfce.js.map",
+    "static/js/2.181e3d31.chunk.js": "/pathrise-client/static/js/2.181e3d31.chunk.js",
+    "static/js/2.181e3d31.chunk.js.map": "/pathrise-client/static/js/2.181e3d31.chunk.js.map",
+    "static/js/3.e6354350.chunk.js": "/pathrise-client/static/js/3.e6354350.chunk.js",
+    "static/js/3.e6354350.chunk.js.map": "/pathrise-client/static/js/3.e6354350.chunk.js.map",
+    "index.html": "/pathrise-client/index.html",
+    "static/css/main.7a9b8e1a.chunk.css.map": "/pathrise-client/static/css/main.7a9b8e1a.chunk.css.map",
+    "static/js/2.181e3d31.chunk.js.LICENSE.txt": "/pathrise-client/static/js/2.181e3d31.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1963cfce.js",
+    "static/js/2.181e3d31.chunk.js",
+    "static/css/main.7a9b8e1a.chunk.css",
+    "static/js/main.b08625eb.chunk.js"
+  ]
+}
