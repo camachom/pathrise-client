@@ -51,7 +51,7 @@ function Jobs() {
 				<tbody>
 					{currentJobs.map((job) => {
 						return (
-							<tr>
+							<tr key={job.id}>
 								<td>{job.id}</td>
 								<td>{job.company_name}</td>
 								<td>{job.title}</td>

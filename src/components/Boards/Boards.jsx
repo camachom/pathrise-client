@@ -33,7 +33,11 @@ function Boards({ navigate }) {
 			<div className={styles.flex + " " + styles.body}>
 				{boards.map((board) => {
 					return (
-						<div className={styles.item} onClick={() => handleClick(board.id)}>
+						<div
+							className={styles.item}
+							key={board.id}
+							onClick={() => handleClick(board.id)}
+						>
 							<BoardDetails board={board} />
 						</div>
 					);
