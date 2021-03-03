@@ -9,7 +9,10 @@ function Boards({ navigate }) {
 	useEffect(() => {
 		const fetchBoards = async () => {
 			try {
-				const response = await fetch("http://20.62.246.134:3000/boards");
+				const response = await fetch("http://20.62.246.134:3000/boards", {
+					method: "GET",
+					mode: "cors",
+				});
 				const data = await response.json();
 
 				setBoards(data);
