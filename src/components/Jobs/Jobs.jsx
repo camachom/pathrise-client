@@ -16,7 +16,7 @@ function Jobs() {
 		const fetchJobs = async () => {
 			try {
 				const response = await fetch(
-					`http://20.62.246.134:3000/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`,
+					`http://40.88.230.46:3000/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`,
 					{
 						method: "GET",
 						mode: "cors",
