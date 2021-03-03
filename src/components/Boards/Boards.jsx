@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BoardDetails from "../BoardDetails/BoardDetails";
+import url from "../../constants/url";
 
 import styles from "./Boards.module.css";
 
@@ -9,13 +10,10 @@ function Boards({ navigate }) {
 	useEffect(() => {
 		const fetchBoards = async () => {
 			try {
-				const response = await fetch(
-					"https://secure-coast-10683.herokuapp.com/boards",
-					{
-						method: "GET",
-						mode: "cors",
-					}
-				);
+				const response = await fetch(`${url}/boards`, {
+					method: "GET",
+					mode: "cors",
+				});
 				const data = await response.json();
 
 				setBoards(data);

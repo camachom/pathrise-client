@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "@reach/router";
+import url from "../../constants/url";
 
 import styles from "./Jobs.module.css";
 
@@ -16,7 +17,7 @@ function Jobs() {
 		const fetchJobs = async () => {
 			try {
 				const response = await fetch(
-					`https://secure-coast-10683.herokuapp.com/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`,
+					`${url}/boards/${boardId}/jobs?limit=${limit}&offset=${offset}`,
 					{
 						method: "GET",
 						mode: "cors",
