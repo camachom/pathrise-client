@@ -29,7 +29,7 @@ function Jobs() {
 		};
 
 		fetchJobs();
-	}, [offset]);
+	}, [offset]); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const clickMoreJobs = (e) => {
 		e.preventDefault();
